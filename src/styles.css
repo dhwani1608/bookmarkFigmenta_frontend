@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-slate-900 dark:text-slate-100;
+  }
+}
+
+.error {
+  background: rgba(200, 69, 43, 0.12);
+  color: var(--danger);
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.loading,
+.empty,
+.muted {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
